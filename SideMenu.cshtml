@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Test_Partial.Models.MenuItem>
+<style>
+    img {
+        width: 30%;
+        float: left;
+        margin: 1.66%;
+    }
+</style>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Menu Item</h4>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+
+            @if (Model != null)
+            {
+
+                foreach (var item in Model)
+                {
+
+                    <li class="list-group-item"><a href="@item.Link" class="btn btn-primary btn-block">@item.LinkName</a></li>
+
+                }
+            }
+
+        </ul>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Test_Partial.Models.MenuItem>
+@{
+    ViewBag.Title = "Index";
+    // Layout = null;
+}
+<style>
+    img {
+        width: 30%;
+        float: left;
+        margin: 1.66%;
+    }
+</style>
+<div class="panel panel-body" style="min-height:256px">
+
+    <div class="col-md-3">
+
+        @{ Html.RenderAction("SideMenu", "Home");}
+
+    </div>
+    <div>
+
+        @if (Model != null)
+        {
+
+            foreach (var item in Model)
+            {
+            <a href="@item.Link"> <img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg" /></a>
+
+            }
+        }
+    </div>
+</div>
